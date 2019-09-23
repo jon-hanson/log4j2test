@@ -1,0 +1,35 @@
+{
+    "configuration": {
+        "status": "error",
+        "appenders": {
+            "RollingFile": {
+                "name": "RollingFile",
+                "fileName": "logs/test.log",
+                "filePattern": "logs/test-%d{{yyyy-MM-dd-HH-mm-ss}-%i.log.gz",
+                "append": false,
+                "PatternLayout": {
+                    "pattern": "%d{yyyy-MM-dd'T'HH:mm:ss.SSS} [%c{2}] [%t]%n[%p] : %m%n"
+                },
+                "Policies": {
+                    "OnStartupTriggeringPolicy": {
+                        "minSize" : 0
+                    },
+                    "SizeBasedTriggeringPolicy": {
+                        "size": "50 MB"
+                    }
+                },
+                "DefaultRolloverStrategy": {
+                    "max": "10"
+                }
+            }
+        },
+        "loggers": {
+            "root": {
+                "level": "info",
+                "AppenderRef": [
+                    {"ref": "RollingFile", "level": "INFO"}
+                ]
+            }
+        }
+    }
+}
