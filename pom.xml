@@ -12,8 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <log4j2.version>2.12.1</log4j2.version>
-        <jackson.version>2.10.0.pr1</jackson.version>
+        <log4j2.version>2.13.3</log4j2.version>
         <jdk.version>1.8</jdk.version>
     </properties>
 
@@ -23,12 +22,6 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>${log4j2.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
         </dependency>
 
     </dependencies>
